@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_app"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.g_corestreamsdemo.screens.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@navigation/nav_graph_app"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_streamsFragment"
+            app:destination="@id/streamsFragment"
+            app:popUpTo="@navigation/nav_graph_app"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.g_corestreamsdemo.screens.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_streamsFragment"
+            app:destination="@id/streamsFragment"
+            app:popUpTo="@navigation/nav_graph_app"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/streamsFragment"
+        android:name="com.example.g_corestreamsdemo.screens.streams.StreamsFragment"
+        android:label="StreamsFragment"
+        tools:layout="@layout/fragment_streams">
+        <action
+            android:id="@+id/action_streamsFragment_to_streamPlayerFragment"
+            app:destination="@id/streamPlayerFragment" />
+        <action
+            android:id="@+id/action_streamsFragment_to_createBroadcastFragment"
+            app:destination="@id/createBroadcastFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/streamPlayerFragment"
+        android:name="com.example.g_corestreamsdemo.screens.StreamPlayerFragment"
+        android:label="fragment_stream_player"
+        tools:layout="@layout/fragment_stream_player" />
+
+    <fragment
+        android:id="@+id/createBroadcastFragment"
+        android:name="com.example.g_corestreamsdemo.screens.broadcast.CreateBroadcastFragment"
+        android:label="CreateBroadcastFragment"
+        tools:layout="@layout/fragment_create_broadcast">
+        <action
+            android:id="@+id/action_createBroadcastFragment_to_startBroadcastFragment"
+            app:destination="@id/startBroadcastFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startBroadcastFragment"
+        android:name="com.example.g_corestreamsdemo.screens.broadcast.StartBroadcastFragment"
+        android:label="StartBroadcastFragment"
+        tools:layout="@layout/fragment_start_broadcast"/>
+</navigation>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <com.pedro.rtplibrary.view.OpenGlView
+        android:id="@+id/openGlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:visibility="gone"
+
+        app:keepAspectRatio="true"
+        app:aspectRatioMode="adjust"/>
+
+    <RadioGroup
+        android:id="@+id/urlGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/pushUrlRadioButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/pushUrlRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/push_url"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/orange"
+            android:layout_marginHorizontal="8dp"/>
+
+        <RadioButton
+            android:id="@+id/backupPushUrlRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/backup_push_url"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/orange"
+            android:layout_marginHorizontal="8dp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/currentFPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="16"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/urlGroup"/>
+
+    <TextView
+        android:id="@+id/currentBitrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="16"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentFPS"/>
+
+
+    <LinearLayout
+        android:id="@+id/qualityGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/round_trans_black_background"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/toggleBroadcast">
+
+        <TextView
+            style="@style/broadcastQualityTextStyle"
+            android:id="@+id/fullHdQualityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/full_hd_quality"
+            android:layout_marginHorizontal="4dp"/>
+
+        <TextView
+            style="@style/broadcastQualityTextStyle"
+            android:id="@+id/hdQualityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hd_quality"
+            android:layout_marginHorizontal="4dp"/>
+
+        <TextView
+            style="@style/broadcastQualityTextStyle"
+            android:id="@+id/sdQualityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sd_quality"
+            android:layout_marginHorizontal="4dp"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/muteToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mute"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="16"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/qualityGroup"
+        app:layout_constraintBottom_toBottomOf="@id/qualityGroup"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/toggleBroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="@string/start_broadcast"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/playbackBroadcast"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_play_outline"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="@+id/toggleBroadcast"
+        app:layout_constraintEnd_toStartOf="@+id/toggleBroadcast"
+        app:layout_constraintBottom_toBottomOf="@+id/toggleBroadcast"/>
+
+    <ImageView
+        android:id="@+id/switchCamera"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_switch_camera_24"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintTop_toTopOf="@+id/toggleBroadcast"
+        app:layout_constraintStart_toEndOf="@+id/toggleBroadcast"
+        app:layout_constraintBottom_toBottomOf="@+id/toggleBroadcast"
+        android:contentDescription="@string/switch_camera_desc" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

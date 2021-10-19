@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/myTextInputLayoutStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="22dp"
+    android:paddingVertical="22dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etStreamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_stream_name"
+        android:textColor="@color/edit_text_color_selector"
+        android:selectAllOnFocus="true"/>
+
+</com.google.android.material.textfield.TextInputLayout>

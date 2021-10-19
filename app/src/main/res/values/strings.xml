@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">G-CoreStreamsDemo</string>
+
+    <string name="toolbar_title_fragment_streams">Streams</string>
+    <string name="toolbar_title_create_broadcast">Select stream</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter">Enter</string>
+    <string name="etEmail_is_empty">Enter eMail</string>
+    <string name="etPassword_is_empty">Enter password</string>
+    <string name="etEmail_is_incorrect">Please enter a valid email</string>
+    <string name="etPassword_is_incorrect">Please enter correct password</string>
+
+    <string name="logged_success">You are successfully logged in</string>
+    <string name="logged_fail">Invalid email or password</string>
+
+    <string name="empty_list">The list is empty</string>
+    <string name="is_live">Live</string>
+    <string name="is_backup_live">Backup Live</string>
+    <string name="is_offline">Offline</string>
+    <string name="is_disabled">Disabled</string>
+    <string name="stream_not_available">This stream is currently not available</string>
+    <string name="stream_playback_error">Stream playback error</string>
+
+    <string name="camera_or_record_audio_is_denied">The broadcast create function is not available, as there are no required permissions</string>
+    <string name="no_free_streams">The function is not available, since there are no free streams (limit 3 online streams)</string>
+    <string name="no_active_streams">No active streams, create a stream to start broadcasting</string>
+
+    <!-- Create stream dialog -->
+    <string name="create_stream">Create stream</string>
+    <string name="enter_stream_name">Enter stream name</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="stream_name_is_empty">The name cannot be empty</string>
+    <string name="create_stream_failed">Failed to create stream</string>
+    <string name="limit_of_active_streams_reached">The number of active streams cannot exceed</string>
+
+    <!-- End broadcast dialog -->
+    <string name="end_broadcast">End broadcast</string>
+    <string name="end_broadcast_message">When you go back, streaming will stop.</string>
+    <string name="exit">Exit</string>
+    <string name="stay">Stay</string>
+
+    <!-- Streaming -->
+    <string name="start_broadcast">Start broadcast</string>
+    <string name="stop_broadcast">Stop broadcast</string>
+    <string name="mute">Mute</string>
+    <string name="current_fps">current fps: %1$d</string>
+    <string name="current_bitrate_in_Kbps">current bitrate: %1$d Kbps</string>
+    <string name="error_preparing_stream">Error preparing stream, This device can\'t do it"</string>
+    <string name="push_url">Push url</string>
+    <string name="backup_push_url">Backup push url</string>
+    <string name="switch_url_failed">To switch url, you need to stop the broadcast</string>
+
+    <!-- Stream resolution resources -->
+    <string name="full_hd_quality">1080p</string>
+    <string name="hd_quality">720p</string>
+    <string name="sd_quality">480p</string>
+    <string name="switch_quality_failed">To switch the resolution, you need to stop the broadcast</string>
+
+    <!-- Connect checker rtmp messages -->
+    <string name="auth_error">Auth error</string>
+    <string name="auth_success">Auth success</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="connection_success">Connection success</string>
+    <string name="disconnected">Disconnected...</string>
+
+    <!-- View descriptions -->
+    <string name="fab_create_broadcast_desc">Create broadcast</string>
+    <string name="switch_camera_desc">Switch camera</string>
+    <string name="fab_create_stream_desc">Create stream</string>
+</resources>
