@@ -1,4 +1,4 @@
-package com.example.g_corestreamsdemo.screens.broadcast
+package com.example.g_corestreamsdemo.utils
 
 enum class StreamResolution(val width: Int, val height: Int) {
     FULL_HD(1920, 1080),

@@ -19,6 +19,7 @@ import com.example.g_corestreamsdemo.model.StreamItemModel
 import com.example.g_corestreamsdemo.model.data.remote.RemoteAccessManager
 import com.example.g_corestreamsdemo.model.data.remote.auth.AuthResponse
 import com.example.g_corestreamsdemo.model.data.remote.streams.StreamItemResponse
+import com.example.g_corestreamsdemo.screens.start_broadcast.StartBroadcastFragment
 import com.example.g_corestreamsdemo.screens.streams.StreamItemsAdapter
 import com.example.g_corestreamsdemo.screens.streams.StreamItemsAdapterListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

@@ -1,4 +1,4 @@
-package com.example.g_corestreamsdemo.extensions
+package com.example.g_corestreamsdemo.utils.extensions
 
 import android.text.Editable
 import android.text.TextWatcher

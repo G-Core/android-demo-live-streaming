@@ -1,4 +1,4 @@
-package com.example.g_corestreamsdemo.screens.broadcast
+package com.example.g_corestreamsdemo.screens.start_broadcast
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.g_corestreamsdemo.R
 import com.example.g_corestreamsdemo.databinding.FragmentStartBroadcastBinding
+import com.example.g_corestreamsdemo.utils.StreamResolution
+import com.example.g_corestreamsdemo.utils.StreamState
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class StartBroadcastFragment : Fragment(R.layout.fragment_start_broadcast) {

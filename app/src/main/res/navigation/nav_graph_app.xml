@@ -65,7 +65,7 @@
 
     <fragment
         android:id="@+id/startBroadcastFragment"
-        android:name="com.example.g_corestreamsdemo.screens.broadcast.StartBroadcastFragment"
+        android:name="com.example.g_corestreamsdemo.screens.start_broadcast.StartBroadcastFragment"
         android:label="StartBroadcastFragment"
         tools:layout="@layout/fragment_start_broadcast"/>
 </navigation>

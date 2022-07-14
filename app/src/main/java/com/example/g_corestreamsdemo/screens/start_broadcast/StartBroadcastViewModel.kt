@@ -1,4 +1,4 @@
-package com.example.g_corestreamsdemo.screens.broadcast
+package com.example.g_corestreamsdemo.screens.start_broadcast
 
 import android.app.Application
 import android.content.Context
@@ -7,6 +7,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.g_corestreamsdemo.R
+import com.example.g_corestreamsdemo.utils.CustomBitrateAdapter
+import com.example.g_corestreamsdemo.utils.StreamResolution
+import com.example.g_corestreamsdemo.utils.StreamState
 import com.pedro.encoder.input.video.CameraHelper
 import com.pedro.encoder.input.video.CameraOpenException
 import com.pedro.rtmp.flv.video.ProfileIop
@@ -80,7 +83,7 @@ class StartBroadcastViewModel(application: Application) : AndroidViewModel(appli
     fun stopBroadcast() {
         rtmpCamera2?.let {
             if (it.isStreaming) {
-                _streamState.value = StreamState.STOP
+                _streamState.postValue(StreamState.STOP)
                 it.stopStream()
             }
         }
@@ -204,7 +207,7 @@ class StartBroadcastViewModel(application: Application) : AndroidViewModel(appli
         private lateinit var bitrateAdapter: BitrateAdapter
         override fun onConnectionSuccessRtmp() {
 
-            bitrateAdapter = BitrateAdapter { bitrate ->
+            bitrateAdapter = CustomBitrateAdapter { bitrate ->
                 rtmpCamera2?.setVideoBitrateOnFly(bitrate)
             }.apply {
                 setMaxBitrate(StreamParameters.maxBitrate)
@@ -231,9 +234,9 @@ class StartBroadcastViewModel(application: Application) : AndroidViewModel(appli
     private object StreamParameters {
         var resolution = StreamResolution.FULL_HD
         const val fps = 30
-        const val startBitrate = 200 * 1024
+        const val startBitrate = 400 * 1024
         const val iFrameIntervalInSeconds = 5
-        const val maxBitrate = 3000 * 1024
+        const val maxBitrate = 4000 * 1024
         const val backgroundStreamingTimeOutInMillis: Long = 60000
     }
 

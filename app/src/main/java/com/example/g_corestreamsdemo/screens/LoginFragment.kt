@@ -13,8 +13,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.g_corestreamsdemo.R
 import com.example.g_corestreamsdemo.databinding.FragmentLoginBinding
-import com.example.g_corestreamsdemo.extensions.TextWatcherAfterTextCallback
-import com.example.g_corestreamsdemo.extensions.afterTextChangedListener
+import com.example.g_corestreamsdemo.utils.extensions.TextWatcherAfterTextCallback
+import com.example.g_corestreamsdemo.utils.extensions.afterTextChangedListener
 import com.example.g_corestreamsdemo.model.data.remote.RemoteAccessManager
 import com.example.g_corestreamsdemo.model.data.remote.auth.AuthRequestBody
 import com.example.g_corestreamsdemo.model.data.remote.auth.AuthResponse
