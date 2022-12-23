@@ -1,6 +1,8 @@
 # G-Core Labs Demo – Stream Live Video Online on Android
 # Introduction
 Set up live streaming in 15 minutes in your Android project instead of 7 days of work and setting wild parameters of codecs, network, etc. This demo project is a quick tutorial how to stream live video from your own mobile app to an audience of 1 000 000+ viewers like Instagram, Youtube, etc.
+
+![Android live output](https://user-images.githubusercontent.com/100352152/209284674-5a291553-295e-48cb-bba3-50486bf6955f.gif)
 # Features
 1. Authorization 
 2. HLS & MPEG-DASH playback
